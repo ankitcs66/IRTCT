@@ -15,10 +15,14 @@ class IRCTC:
         else:
             self.train_schedule()
 
+            
+            
     def train_schedule(self):
         train_no = input("Enter the train no")
         self.fetch_data(train_no)
 
+        
+        
     def fetch_data(self, train_no):
         data = requests.get("https://indianrailapi.com/api/v2/TrainSchedule/apikey/c5a0657efd4793cb36a4a487c0455d8a/{}".format(train_no))
 
